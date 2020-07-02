@@ -1,4 +1,4 @@
-class UserAtrributeValue < ApplicationRecord
+class UserAttributeValue < ApplicationRecord
 
   validates :value, presence: true
   validates_presence_of :user_attribute

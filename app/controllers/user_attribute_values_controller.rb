@@ -1,4 +1,4 @@
-class UserAtrributeValuesController < ApplicationController
+class UserAttributeValuesController < ApplicationController
   before_action :set_user_atrribute_value, only: [:show, :update, :destroy]
 
   # GET /user_atrribute_values
