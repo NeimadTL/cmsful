@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_02_005011) do
+ActiveRecord::Schema.define(version: 2020_07_02_010231) do
+
+  create_table "user_atrribute_values", force: :cascade do |t|
+    t.integer "user_attribute_id", null: false
+    t.integer "user_id", null: false
+    t.string "value", default: "", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_attribute_id", "user_id"], name: "index_user_atrribute_values_on_user_attribute_id_and_user_id", unique: true
+    t.index ["user_attribute_id"], name: "index_user_atrribute_values_on_user_attribute_id"
+    t.index ["user_id"], name: "index_user_atrribute_values_on_user_id"
+  end
 
   create_table "user_attributes", force: :cascade do |t|
     t.string "name", default: "", null: false
